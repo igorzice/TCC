@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph GraphDirection="LeftToRight" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="IModel" Category="Model" Annotations="Npgsql:ValueGenerationStrategy: IdentityByDefaultColumn Relational:MaxIdentifierLength: 63" Bounds="10.9999948279001,-91.5205718948365,699.670868123372,522.401208296204" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot" Group="Expanded" Label="RastreioContext" ProductVersion="3.1.8" PropertyAccessMode="PropertyAccessMode.Default" UseManualLocation="True" />
+    <Node Id="Itinerario" Category="EntityType" Annotations="ConstructorBinding: Microsoft.EntityFrameworkCore.Metadata.ConstructorBinding Relational:TableName: Itinerarios" BaseClass="" Bounds="92.3200006612142,249.340130541992,191.086674957275,141.9203" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot" Group="Expanded" IsAbstract="False" Label="Itinerario" Name="Itinerario" UseManualLocation="True" />
+    <Node Id="Itinerario.Descricao" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.Storage.StringTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="192.320008951823,289.340230541992,71.0866666666666,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="Descricao" MaxLength="None" Name="Descricao" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="Itinerario.Id" Category="Property Primary" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="Npgsql:ValueGenerationStrategy: IdentityByDefaultColumn TypeMapping: Microsoft.EntityFrameworkCore.Storage.IntTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="112.320003509522,289.340230541992,50,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="True" IsRequired="True" IsShadow="False" IsUnicode="True" Label="Id" MaxLength="None" Name="Id" PropertyAccessMode="PropertyAccessMode.Default" Type="int" ValueGenerated="ValueGenerated.OnAdd" />
+    <Node Id="Itinerario.Viagens" Category="Navigation Collection" Bounds="112.320000661214,345.300330541992,77.2233333333333,25.96" Dependent="Viagem" Field="" Inverse="Itinerario" Label="Viagens (*)" Name="Viagens" Principal="" PropertyAccessMode="PropertyAccessMode.Default" Type="List&lt;Viagem&gt;" />
+    <Node Id="Localizacao" Category="EntityType" Annotations="ConstructorBinding: Microsoft.EntityFrameworkCore.Metadata.ConstructorBinding Relational:TableName: Localizacoes" BaseClass="" Bounds="409.337518581814,213.000078833008,281.333333333333,197.880457568359" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot" Group="Expanded" IsAbstract="False" Label="Localizacao" Name="Localizacao" UseManualLocation="True" />
+    <Node Id="Localizacao.DataHora" Category="Property Required" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.Mapping.NpgsqlTimestampTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="429.33751546224,308.960322875977,70.5233333333333,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="DataHora" MaxLength="None" Name="DataHora" PropertyAccessMode="PropertyAccessMode.Default" Type="DateTime" ValueGenerated="None" />
+    <Node Id="Localizacao.Id" Category="Property Primary" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="Npgsql:ValueGenerationStrategy: IdentityByDefaultColumn TypeMapping: Microsoft.EntityFrameworkCore.Storage.IntTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="429.337554931641,253.000178833008,50,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="True" IsRequired="True" IsShadow="False" IsUnicode="True" Label="Id" MaxLength="None" Name="Id" PropertyAccessMode="PropertyAccessMode.Default" Type="int" ValueGenerated="ValueGenerated.OnAdd" />
+    <Node Id="Localizacao.Latitude" Category="Property Required" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.Storage.DoubleTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="509.337581787109,253.000209350586,62.93,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="Latitude" MaxLength="None" Name="Latitude" PropertyAccessMode="PropertyAccessMode.Default" Type="double" ValueGenerated="None" />
+    <Node Id="Localizacao.Longitude" Category="Property Required" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.Storage.DoubleTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="529.860828450521,308.960322875977,73.6433333333333,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="Longitude" MaxLength="None" Name="Longitude" PropertyAccessMode="PropertyAccessMode.Default" Type="double" ValueGenerated="None" />
+    <Node Id="Localizacao.Veiculo" Category="Navigation Property" Bounds="429.33754699707,364.920436401367,75.14,25.96" Dependent="" Field="" Inverse="Localizacoes" Label="Veiculo (1)" Name="Veiculo" Principal="Veiculo" PropertyAccessMode="PropertyAccessMode.Default" Type="Veiculo" />
+    <Node Id="Localizacao.VeiculoId" Category="Property Foreign" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.Storage.IntTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="602.267510579427,253.000209350586,68.4033333333333,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="True" IsIndexed="True" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="VeiculoId" MaxLength="None" Name="VeiculoId" PropertyAccessMode="PropertyAccessMode.Default" Type="int" ValueGenerated="None" />
+    <Node Id="Veiculo" Category="EntityType" Annotations="ConstructorBinding: Microsoft.EntityFrameworkCore.Metadata.ConstructorBinding Relational:TableName: Veiculos" BaseClass="" Bounds="431.450838724772,-51.4754527450561,228.886666666667,197.880452799988" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot" Group="Expanded" IsAbstract="False" Label="Veiculo" Name="Veiculo" UseManualLocation="True" />
+    <Node Id="Veiculo.Capacidade" Category="Property Required" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.Storage.IntTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="558.674172058105,44.4847521972656,81.6633333333334,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="Capacidade" MaxLength="None" Name="Capacidade" PropertyAccessMode="PropertyAccessMode.Default" Type="int" ValueGenerated="None" />
+    <Node Id="Veiculo.Id" Category="Property Primary" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="Npgsql:ValueGenerationStrategy: IdentityByDefaultColumn TypeMapping: Microsoft.EntityFrameworkCore.Storage.IntTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="451.451049804688,-11.47534034729,50,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="True" IsRequired="True" IsShadow="False" IsUnicode="True" Label="Id" MaxLength="None" Name="Id" PropertyAccessMode="PropertyAccessMode.Default" Type="int" ValueGenerated="ValueGenerated.OnAdd" />
+    <Node Id="Veiculo.Localizacoes" Category="Navigation Collection" Bounds="451.451077270508,100.444900054932,101.15,25.96" Dependent="Localizacao" Field="" Inverse="Veiculo" Label="Localizacoes (*)" Name="Localizacoes" Principal="" PropertyAccessMode="PropertyAccessMode.Default" Type="List&lt;Localizacao&gt;" />
+    <Node Id="Veiculo.Motorista" Category="Property Optional" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.Storage.StringTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="531.451049804688,-11.4753527450561,71.25,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="False" IsShadow="False" IsUnicode="True" Label="Motorista" MaxLength="None" Name="Motorista" PropertyAccessMode="PropertyAccessMode.Default" Type="string" ValueGenerated="None" />
+    <Node Id="Veiculo.Viagens" Category="Navigation Collection" Bounds="451.450838724772,44.4847769927979,77.2233333333334,25.96" Dependent="Viagem" Field="" Inverse="Veiculo" Label="Viagens (*)" Name="Viagens" Principal="" PropertyAccessMode="PropertyAccessMode.Default" Type="List&lt;Viagem&gt;" />
+    <Node Id="Viagem" Category="EntityType" Annotations="" BaseClass="" Bounds="30.999997253418,-51.5204718948363,315.726679992675,197.880412745666" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot" Group="Expanded" IsAbstract="False" Label="Viagem" Name="Viagem" />
+    <Node Id="Viagem.Fim" Category="Property Required" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.Mapping.NpgsqlTimestampTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="131,-11.5203718948363,50,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="Fim" MaxLength="None" Name="Fim" PropertyAccessMode="PropertyAccessMode.Default" Type="DateTime" ValueGenerated="None" />
+    <Node Id="Viagem.Finalizada" Category="Property Required" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.Mapping.NpgsqlBoolTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="149.403336079915,44.439734954834,72.1833333333333,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="Finalizada" MaxLength="None" Name="Finalizada" PropertyAccessMode="PropertyAccessMode.Default" Type="bool" ValueGenerated="None" />
+    <Node Id="Viagem.Id" Category="Property Primary" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="Npgsql:ValueGenerationStrategy: IdentityByDefaultColumn TypeMapping: Microsoft.EntityFrameworkCore.Storage.IntTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="51,-11.5203661727905,50,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="True" IsRequired="True" IsShadow="False" IsUnicode="True" Label="Id" MaxLength="None" Name="Id" PropertyAccessMode="PropertyAccessMode.Default" Type="int" ValueGenerated="ValueGenerated.OnAdd" />
+    <Node Id="Viagem.Inicio" Category="Property Required" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.Mapping.NpgsqlTimestampTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="211,-11.520364655304,49.9999999999999,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="False" IsIndexed="False" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="Inicio" MaxLength="None" Name="Inicio" PropertyAccessMode="PropertyAccessMode.Default" Type="DateTime" ValueGenerated="None" />
+    <Node Id="Viagem.Itinerario" Category="Navigation Property" Bounds="158.883330586751,100.39984085083,84.62,25.96" Dependent="" Field="" Inverse="Viagens" Label="Itinerario (1)" Name="Itinerario" Principal="Itinerario" PropertyAccessMode="PropertyAccessMode.Default" Type="Itinerario" />
+    <Node Id="Viagem.ItinerarioId" Category="Property Foreign" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.Storage.IntTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="50.999997253418,100.39984085083,77.8833333333333,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="True" IsIndexed="True" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="ItinerarioId" MaxLength="None" Name="ItinerarioId" PropertyAccessMode="PropertyAccessMode.Default" Type="int" ValueGenerated="None" />
+    <Node Id="Viagem.Veiculo" Category="Navigation Property" Bounds="251.586677246094,44.439735344696,75.14,25.96" Dependent="" Field="" Inverse="Viagens" Label="Veiculo (1)" Name="Veiculo" Principal="Veiculo" PropertyAccessMode="PropertyAccessMode.Default" Type="Veiculo" />
+    <Node Id="Viagem.VeiculoId" Category="Property Foreign" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="TypeMapping: Microsoft.EntityFrameworkCore.Storage.IntTypeMapping" BeforeSaveBehavior="PropertySaveBehavior.Save" Bounds="51.0000011189778,44.4397425842285,68.4033333333333,25.96" Field="" IsAlternateKey="False" IsConcurrencyToken="False" IsForeignKey="True" IsIndexed="True" IsPrimaryKey="False" IsRequired="True" IsShadow="False" IsUnicode="True" Label="VeiculoId" MaxLength="None" Name="VeiculoId" PropertyAccessMode="PropertyAccessMode.Default" Type="int" ValueGenerated="None" />
+  </Nodes>
+  <Links>
+    <Link Source="IModel" Target="Itinerario" Category="Contains" />
+    <Link Source="IModel" Target="Localizacao" Category="Contains" />
+    <Link Source="IModel" Target="Veiculo" Category="Contains" />
+    <Link Source="IModel" Target="Viagem" Category="Contains" />
+    <Link Source="Itinerario" Target="Itinerario.Descricao" Category="Contains" />
+    <Link Source="Itinerario" Target="Itinerario.Id" Category="Contains" />
+    <Link Source="Itinerario" Target="Itinerario.Viagens" Category="Contains" />
+    <Link Source="Localizacao" Target="Localizacao.DataHora" Category="Contains" />
+    <Link Source="Localizacao" Target="Localizacao.Id" Category="Contains" />
+    <Link Source="Localizacao" Target="Localizacao.Latitude" Category="Contains" />
+    <Link Source="Localizacao" Target="Localizacao.Longitude" Category="Contains" />
+    <Link Source="Localizacao" Target="Localizacao.Veiculo" Category="Contains" />
+    <Link Source="Localizacao" Target="Localizacao.VeiculoId" Category="Contains" />
+    <Link Source="Localizacao" Target="Veiculo" Category="Foreign Key" Annotations="" Bounds="547.571572163512,155.403913506004,0.895058214507003,57.5961653270033" From="Localizacao.VeiculoId" IsUnique="False" Label="1:*" LabelBounds="529.945767908278,176.253072896616,14.0733333333332,15.9600000000003" Name="Localizacao -&gt; Veiculo" To="Veiculo.Id" />
+    <Link Source="Veiculo" Target="Veiculo.Capacidade" Category="Contains" />
+    <Link Source="Veiculo" Target="Veiculo.Id" Category="Contains" />
+    <Link Source="Veiculo" Target="Veiculo.Localizacoes" Category="Contains" />
+    <Link Source="Veiculo" Target="Veiculo.Motorista" Category="Contains" />
+    <Link Source="Veiculo" Target="Veiculo.Viagens" Category="Contains" />
+    <Link Source="Viagem" Target="Itinerario" Category="Foreign Key" Annotations="" Bounds="188.156360194923,146.35994085083,0.344400389938414,93.9802501225008" From="Viagem.ItinerarioId" IsUnique="False" Label="1:*" LabelBounds="192.328560389982,185.377395070643,14.0733333333334,15.96" Name="Viagem -&gt; Itinerario" To="Itinerario.Id" />
+    <Link Source="Viagem" Target="Veiculo" Category="Foreign Key" Annotations="" Bounds="346.726677246093,47.4396488221078,75.7241615502898,0.00955254722632759" From="Viagem.VeiculoId" IsUnique="False" Label="1:*" LabelBounds="377.552343653097,27.4844250957209,14.0733333333333,15.96" Name="Viagem -&gt; Veiculo" To="Veiculo.Id" />
+    <Link Source="Viagem" Target="Viagem.Fim" Category="Contains" />
+    <Link Source="Viagem" Target="Viagem.Finalizada" Category="Contains" />
+    <Link Source="Viagem" Target="Viagem.Id" Category="Contains" />
+    <Link Source="Viagem" Target="Viagem.Inicio" Category="Contains" />
+    <Link Source="Viagem" Target="Viagem.Itinerario" Category="Contains" />
+    <Link Source="Viagem" Target="Viagem.ItinerarioId" Category="Contains" />
+    <Link Source="Viagem" Target="Viagem.Veiculo" Category="Contains" />
+    <Link Source="Viagem" Target="Viagem.VeiculoId" Category="Contains" />
+  </Links>
+  <Categories>
+    <Category Id="Contains" Label="Contém" Description="Se a origem do link contém o objeto de destino" CanBeDataDriven="False" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Contido por" IsContainment="True" OutgoingActionLabel="Contém" />
+    <Category Id="EntityType" />
+    <Category Id="Foreign Key" />
+    <Category Id="Model" />
+    <Category Id="Navigation Collection" />
+    <Category Id="Navigation Property" />
+    <Category Id="Property Foreign" />
+    <Category Id="Property Optional" />
+    <Category Id="Property Primary" />
+    <Category Id="Property Required" />
+  </Categories>
+  <Properties>
+    <Property Id="AfterSaveBehavior" Group="Property Flags" DataType="System.String" />
+    <Property Id="Annotations" Description="Annotations" Group="Model Properties" DataType="System.String" />
+    <Property Id="BaseClass" Description="Base class" Group="Model Properties" DataType="System.String" />
+    <Property Id="BeforeSaveBehavior" Group="Property Flags" DataType="System.String" />
+    <Property Id="Bounds" DataType="System.Windows.Rect" />
+    <Property Id="CanBeDataDriven" Label="CanBeDataDriven" Description="CanBeDataDriven" DataType="System.Boolean" />
+    <Property Id="CanLinkedNodesBeDataDriven" Label="CanLinkedNodesBeDataDriven" Description="CanLinkedNodesBeDataDriven" DataType="System.Boolean" />
+    <Property Id="ChangeTrackingStrategy" Description="Change tracking strategy" Group="Model Properties" DataType="System.String" />
+    <Property Id="Dependent" Description="Dependent entity" Group="Model Properties" DataType="System.String" />
+    <Property Id="Expression" DataType="System.String" />
+    <Property Id="Field" Description="Backing field" Group="Model Properties" DataType="System.String" />
+    <Property Id="From" Description="Target property" Group="Model Properties" DataType="System.String" />
+    <Property Id="GraphDirection" DataType="Microsoft.VisualStudio.Diagrams.Layout.LayoutOrientation" />
+    <Property Id="Group" Label="Grupo" Description="Exibir o nó como um grupo" DataType="Microsoft.VisualStudio.GraphModel.GraphGroupStyle" />
+    <Property Id="GroupLabel" DataType="System.String" />
+    <Property Id="IncomingActionLabel" Label="IncomingActionLabel" Description="IncomingActionLabel" DataType="System.String" />
+    <Property Id="Inverse" Description="Inverse entity" Group="Model Properties" DataType="System.String" />
+    <Property Id="IsAbstract" Label="IsAbstract" Description="IsAbstract" Group="Model Properties" DataType="System.Boolean" />
+    <Property Id="IsAlternateKey" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsConcurrencyToken" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsContainment" DataType="System.Boolean" />
+    <Property Id="IsEnabled" DataType="System.Boolean" />
+    <Property Id="IsForeignKey" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsIndexed" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsPrimaryKey" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsRequired" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsShadow" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsUnicode" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsUnique" Group="Model Properties" DataType="System.Boolean" />
+    <Property Id="Label" Label="Rótulo" Description="Rótulo de um objeto Annotatable que pode ser exibido" DataType="System.String" />
+    <Property Id="LabelBounds" DataType="System.Windows.Rect" />
+    <Property Id="MaxLength" DataType="System.String" />
+    <Property Id="Name" Group="Model Properties" DataType="System.String" />
+    <Property Id="OutgoingActionLabel" Label="RótuloAçãoSaída" Description="RótuloAçãoSaída" DataType="System.String" />
+    <Property Id="Principal" Description="Principal entity" Group="Model Properties" DataType="System.String" />
+    <Property Id="ProductVersion" Label="Product Version" Description="EF Core product version" Group="Model Properties" DataType="System.String" />
+    <Property Id="PropertyAccessMode" Group="Property Flags" DataType="System.String" />
+    <Property Id="TargetType" DataType="System.Type" />
+    <Property Id="To" Description="Source property" Group="Model Properties" DataType="System.String" />
+    <Property Id="Type" Description="CLR data type" Group="Model Properties" DataType="System.String" />
+    <Property Id="UseManualLocation" DataType="System.Boolean" />
+    <Property Id="Value" DataType="System.String" />
+    <Property Id="ValueGenerated" Group="Property Flags" DataType="System.String" />
+    <Property Id="ValueLabel" DataType="System.String" />
+  </Properties>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="EntityType" ValueLabel="True">
+      <Condition Expression="HasCategory('EntityType')" />
+      <Setter Property="Background" Value="#FFC0C0C0" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property Primary" ValueLabel="True">
+      <Condition Expression="HasCategory('Property Primary')" />
+      <Setter Property="Background" Value="#FF008000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property Optional" ValueLabel="True">
+      <Condition Expression="HasCategory('Property Optional')" />
+      <Setter Property="Background" Value="#FF808040" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property Foreign" ValueLabel="True">
+      <Condition Expression="HasCategory('Property Foreign')" />
+      <Setter Property="Background" Value="#FF8080FF" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property Required" ValueLabel="True">
+      <Condition Expression="HasCategory('Property Required')" />
+      <Setter Property="Background" Value="#FFC0A000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Navigation Property" ValueLabel="True">
+      <Condition Expression="HasCategory('Navigation Property')" />
+      <Setter Property="Background" Value="#FF990000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Navigation Collection" ValueLabel="True">
+      <Condition Expression="HasCategory('Navigation Collection')" />
+      <Setter Property="Background" Value="#FFFF3232" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Model" ValueLabel="True">
+      <Condition Expression="HasCategory('Model')" />
+      <Setter Property="Background" Value="#FFFFFFFF" />
+    </Style>
+  </Styles>
+</DirectedGraph>
